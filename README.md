@@ -1,6 +1,5 @@
 # Website Monitor
 
-<<<<<<< HEAD
 A Python tool that monitors website availability, response health, and semantic failures (e.g. suspended hosting, expired domains), built as a learning project to practice domain modeling and async I/O, and extended gradually as new features are added.
 
 This is not a polished product. It's a working system built to understand real concepts — async networking, failure classification, and separating domain logic from I/O, without relying on AI to write the code. AI was used to understand concepts, not to generate the implementation.
@@ -253,4 +252,3 @@ python -m src.main
 ## Learning Objective
 
 Rather than building a production-ready uptime service immediately, this repository documents the process of learning networking, asynchronous programming, clean architecture, and maintainable Python application design through incremental development.
->>>>>>> 4ba7194 (update repo readme and repo structure)
