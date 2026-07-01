@@ -34,6 +34,7 @@ def summary_maker(reports):
     except AttributeError as e:
       logger.error(f"{report} : {e}")
   report_file = "./reports/report.txt"
+  
   with open(report_file, 'w') as file:
     file.write("Report Summary")
     file.write("\n")

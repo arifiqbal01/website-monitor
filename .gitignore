@@ -1,0 +1,47 @@
+# Virtual Environment
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Generated Reports
+reports/
+
+# Test & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build Artifacts
+build/
+dist/
+*.egg-info/
+
+# Environment Variables
+.env
+.env.*
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+
+# Local experiments (optional)
+old-code/
