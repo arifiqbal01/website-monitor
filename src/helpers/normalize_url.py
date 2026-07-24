@@ -1,34 +1,28 @@
 from urllib.parse import urlparse
 import socket
-from ..domain.model import Website, SystemFailure, WebsiteFailure, WebsiteFailureTypes, SystemFailureTypes
+
+from ..domain.model import Website, WebsiteType
 from .logger import logger
 
-def normalize_url(website):
-  try:
-    logger.info(f"Initalizing normalization for {website}")
-    p = urlparse(website)
-    logger.info(f"Parsing successful for {website}")
-    if p.scheme and p.netloc and not p.path:
-      socket.getaddrinfo(p.netloc, None)
-      website = f"{p.scheme}://{p.netloc}"
 
-    elif p.path and not p.scheme and not p.netloc:
-      socket.getaddrinfo(p.path, None)
-      website = f"https://{p.path}"
+def normalize_url(url: str, website_type: WebsiteType) -> Website:
+    logger.info(f"Initializing normalization for {url}")
 
-    elif p.netloc and not p.scheme:
-      socket.getaddrinfo(p.netloc, None)
-      website = f"https://{p.netloc}"
+    parsed = urlparse(url)
 
-    elif p.scheme and p.netloc and p.path:
-      socket.getaddrinfo(p.netloc, None)
-      website = f"{p.scheme}://{p.netloc}{p.path}"  
-  except ValueError as e:
-    SystemFailure(type=SystemFailureTypes.InvalidURL, message=e)
-    logger.warning(f"Parsing failed for {website}. Reason: {e}")
-  except socket.gaierror as e:
-    WebsiteFailure(type=WebsiteFailureTypes.DNS, message=e)
-    logger.warning(f"Parsing failed for {website}. Reason: {e}")
-  
-  logger.info(f"Normalization done for {website}")
-  return  Website(URL=website)
+    # Add https:// if missing
+    if not parsed.scheme:
+        url = f"https://{url}"
+        parsed = urlparse(url)
+
+    # Validate hostname
+    socket.getaddrinfo(parsed.netloc, None)
+
+    normalized_url = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
+
+    logger.info(f"Normalization completed for {normalized_url}")
+
+    return Website(
+        url=normalized_url,
+        type=website_type,
+    )

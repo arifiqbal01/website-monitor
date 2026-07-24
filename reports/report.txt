@@ -1,18 +1,25 @@
 Report Summary
 ----------------------
 
-Total: 4 
-UP: 1 
-DOWN: 1 
-DEGRADED: 2 
+Total: 4
+UP: 0
+DOWN: 0
+DEGRADED: 0
 
-UP
-- https://google.com 
 
-DOWN
-- http://httpstat.us/503 
 
-DEGRADED
-- https://arif-iqbal.com/main 
-- http://www.webartsy.site/ 
+
+
+WordPress Reports
+----------------------
+
+Website: https://webartsy.nl
+Status: WebStatus.UP
+HTTP Code: 200
+WordPress Version: Unknown
+REST API: Disabled
+XML-RPC: Enabled
+Login Page: Accessible
+Database Error: No
+Maintenance Mode: No
 

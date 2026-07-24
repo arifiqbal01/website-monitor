@@ -1,79 +1,109 @@
-
 from src.helpers.logger import logger
-from json import dumps, loads
-from src.domain.model import Website, CheckResult, WebStatus, WebsiteReport
+from src.domain.model import WebsiteReport, WordpressReport
+
 
 def summary_maker(reports):
-  up_websites = []
-  down_websites = []
-  degraded_websites = []
-  unkown_websites = []
-  
-  web_count = 0
-  up_count = 0
-  down_count = 0
-  degraded_count = 0
-  unknown_count = 0
+    up_websites = []
+    down_websites = []
+    degraded_websites = []
+    unknown_websites = []
 
-  for report in reports:
-    try:
-      if report.website:
-        web_count += 1
-        if report.status == "UP":
-          up_count += 1
-          up_websites.append(report.website.URL)
-        elif report.status == "DOWN":
-          down_count += 1
-          down_websites.append(report.website.URL)
-        elif report.status == "DEGRADED":
-          degraded_count += 1
-          degraded_websites.append(report.website.URL)
-        elif report.status == "UNKNOWN":
-          unknown_count += 1
-          unkown_websites.append(report.website.URL)
-    except AttributeError as e:
-      logger.error(f"{report} : {e}")
-  report_file = "./reports/report.txt"
-  
-  with open(report_file, 'w') as file:
-    file.write("Report Summary")
-    file.write("\n")
-    file.write("----------------------")
-    file.write("\n")
-    file.write("\n")
+    wordpress_reports = []
 
-    file.write(f"Total: {web_count} \n")
-    file.write(f"UP: {up_count} \n")
-    file.write(f"DOWN: {down_count} \n")
-    file.write(f"DEGRADED: {degraded_count} \n")
-    if unknown_count != 0:
-      file.write(f"UNKNOWN: {unknown_count} \n")
-    
-    file.write("\n")
-    if up_count != 0:
-      file.write("UP")
-      file.write("\n")
-      for website in up_websites:
-        file.write(f"- {website} \n")
-      
-    file.write("\n")
-    if down_count != 0:
-      file.write("DOWN")
-      file.write("\n")
-      for website in down_websites:
-        file.write(f"- {website} \n")
-    
-    file.write("\n")
-    if degraded_count != 0:
-      file.write("DEGRADED")
-      file.write("\n")
-      for website in degraded_websites:
-        file.write(f"- {website} \n")
-    
-    file.write("\n")
-    if unknown_count != 0:
-      file.write("UNKNOWN")
-      file.write("\n")
-      for website in unknown_websites:
-        file.write(f"- {website} \n")
-  return 
+    web_count = 0
+    up_count = 0
+    down_count = 0
+    degraded_count = 0
+    unknown_count = 0
+
+    for report in reports:
+        try:
+            if not isinstance(report, WebsiteReport):
+                logger.warning(f"Skipping invalid report: {report}")
+                continue
+
+            web_count += 1
+
+            if report.status == "UP":
+                up_count += 1
+                up_websites.append(report.website.url)
+
+            elif report.status == "DOWN":
+                down_count += 1
+                down_websites.append(report.website.url)
+
+            elif report.status == "DEGRADED":
+                degraded_count += 1
+                degraded_websites.append(report.website.url)
+
+            elif report.status == "UNKNOWN":
+                unknown_count += 1
+                unknown_websites.append(report.website.url)
+
+            if isinstance(report, WordpressReport):
+                wordpress_reports.append(report)
+
+        except AttributeError as e:
+            logger.error(f"{report}: {e}")
+
+    report_file = "./reports/report.txt"
+
+    with open(report_file, "w") as file:
+        file.write("Report Summary\n")
+        file.write("----------------------\n\n")
+
+        file.write(f"Total: {web_count}\n")
+        file.write(f"UP: {up_count}\n")
+        file.write(f"DOWN: {down_count}\n")
+        file.write(f"DEGRADED: {degraded_count}\n")
+
+        if unknown_count:
+            file.write(f"UNKNOWN: {unknown_count}\n")
+
+        file.write("\n")
+
+        if up_websites:
+            file.write("UP\n")
+            for website in up_websites:
+                file.write(f"- {website}\n")
+
+        file.write("\n")
+
+        if down_websites:
+            file.write("DOWN\n")
+            for website in down_websites:
+                file.write(f"- {website}\n")
+
+        file.write("\n")
+
+        if degraded_websites:
+            file.write("DEGRADED\n")
+            for website in degraded_websites:
+                file.write(f"- {website}\n")
+
+        file.write("\n")
+
+        if unknown_websites:
+            file.write("UNKNOWN\n")
+            for website in unknown_websites:
+                file.write(f"- {website}\n")
+
+        #
+        # WordPress Details
+        #
+        if wordpress_reports:
+            file.write("\n")
+            file.write("WordPress Reports\n")
+            file.write("----------------------\n\n")
+
+            for wp in wordpress_reports:
+                file.write(f"Website: {wp.website.url}\n")
+                file.write(f"Status: {wp.status}\n")
+                file.write(f"HTTP Code: {wp.http_code}\n")
+                file.write(f"WordPress Version: {wp.wordpress_version or 'Unknown'}\n")
+                file.write(f"REST API: {'Enabled' if wp.rest_api else 'Disabled'}\n")
+                file.write(f"XML-RPC: {'Enabled' if wp.xmlrpc else 'Disabled'}\n")
+                file.write(f"Login Page: {'Accessible' if wp.login_page else 'Unavailable'}\n")
+                file.write(f"Database Error: {'Yes' if wp.database_error else 'No'}\n")
+                file.write(f"Maintenance Mode: {'Yes' if wp.maintenance_mode else 'No'}\n")
+                file.write("\n")

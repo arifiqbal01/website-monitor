@@ -1,11 +1,25 @@
 {
+  "monitor": {
     "interval-minutes": 1,
     "timeout-seconds": 3,
-    "retries": 3,
-    "websites": [
-        "google.com",
-        "https://arif-iqbal.com/main",
-        "http://www.webartsy.site/",
-        "http://httpstat.us/503"
-    ]
+    "retries": 3
+  },
+  "websites": [
+    {
+      "url": "https://google.com",
+      "type": "generic"
+    },
+    {
+      "url": "https://github.com",
+      "type": "generic"
+    },
+    {
+      "url": "https://openai.com",
+      "type": "generic"
+    },
+    {
+      "url": "https://webartsy.nl",
+      "type": "wordpress"
+    }
+  ]
 }

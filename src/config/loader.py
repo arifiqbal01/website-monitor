@@ -2,9 +2,8 @@ import json
 import os
 
 from dotenv import load_dotenv
-
-from .normalize_url import normalize_url
-from .logger import logger
+from ..helpers.normalize_url import normalize_url
+from ..helpers.logger import logger
 from ..domain import model
 
 load_dotenv()
@@ -12,7 +11,7 @@ load_dotenv()
 CONFIG_PATH = "./config.json"
 
 
-def loader():
+def load_config():
     try:
         logger.info("Initializing loader")
 
@@ -31,21 +30,27 @@ def loader():
             ),
         )
 
-        normalized_websites = []
+        websites = []
 
         for website_data in data.get("websites", []):
             website = normalize_url(
                 website_data["url"],
-                model.WebsiteType(website_data.get("type", "generic")),
+                model.WebsiteType(
+                    website_data.get("type", "generic")
+                ),
             )
-            normalized_websites.append(website)
+            websites.append(website)
 
-        return normalized_websites, config
+        return websites, config
 
     except FileNotFoundError:
-        logger.exception(f"Configuration file '{CONFIG_PATH}' not found.")
+        logger.exception(
+            f"Configuration file '{CONFIG_PATH}' not found."
+        )
         raise
 
     except json.JSONDecodeError:
-        logger.exception(f"Invalid JSON in '{CONFIG_PATH}'.")
+        logger.exception(
+            f"Invalid JSON in '{CONFIG_PATH}'."
+        )
         raise

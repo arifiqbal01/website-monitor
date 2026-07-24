@@ -4,15 +4,32 @@ from typing import Optional
 import uuid
 from datetime import datetime
 
+class WebsiteType(str, Enum):
+    GENERIC = "generic"
+    WORDPRESS = "wordpress"
+    SHOPIFY = "shopify"
+    NEXTJS = "nextjs"
+    LARAVEL = "laravel"
+    FASTAPI = "fastapi"
+
 @dataclass(frozen=True)
 class Website:
-    URL: str
+    url: str
+    type: WebsiteType = WebsiteType.GENERIC
+
+from dataclasses import dataclass
+
+@dataclass(frozen=True)
+class SlackConfig:
+    enabled: bool
+    webhook_url: str | None = None
 
 @dataclass(frozen=True)
 class Config:
     interval_minutes: int
     timeout_seconds: int
     retries: int
+    slack: SlackConfig
 
 class WebsiteEvents(Enum):
     CHECK_STARTED = auto()
@@ -84,6 +101,7 @@ class CheckResult:
     http_code: Optional[int]
     failure: WebsiteFailure
 
+
 class WebStatus(Enum):
     UP = auto()
     DOWN = auto()
@@ -93,9 +111,18 @@ class WebStatus(Enum):
 @dataclass(frozen=True)
 class WebsiteReport():
     website: Website
-    status: str
+    status: WebStatus
     response_time: Optional[int]
     http_code: Optional[int]
     failure: WebsiteFailure
     id: uuid.UUID = field(default_factory=uuid.uuid4)
     timestamp: datetime.now = field(default_factory=datetime.now)
+
+@dataclass(frozen=True)
+class WordpressReport(WebsiteReport):
+    wordpress_version: str | None = None
+    rest_api: bool = False
+    xmlrpc: bool = False
+    login_page: bool = False
+    database_error: bool = False
+    maintenance_mode: bool = False

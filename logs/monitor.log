@@ -10326,3 +10326,765 @@
 2026-01-23 | 19:23 | WARNING | All 3 attempts exhausted.
 2026-01-23 | 19:23 | INFO | Initalizing status check for http://httpstat.us/503
 2026-01-23 | 19:23 | INFO | http://httpstat.us/503 status is WebStatus.DOWN
+2026-07-24 | 15:35 | INFO | Initalizing loader
+2026-07-24 | 15:35 | INFO | Initalizing normalization for google.com
+2026-07-24 | 15:35 | INFO | Parsing successful for google.com
+2026-07-24 | 15:35 | INFO | Normalization done for https://google.com
+2026-07-24 | 15:35 | INFO | Initalizing normalization for https://arif-iqbal.com/main
+2026-07-24 | 15:35 | INFO | Parsing successful for https://arif-iqbal.com/main
+2026-07-24 | 15:35 | INFO | Normalization done for https://arif-iqbal.com/main
+2026-07-24 | 15:35 | INFO | Initalizing normalization for http://www.webartsy.site/
+2026-07-24 | 15:35 | INFO | Parsing successful for http://www.webartsy.site/
+2026-07-24 | 15:35 | WARNING | Parsing failed for http://www.webartsy.site/. Reason: [Errno 8] nodename nor servname provided, or not known
+2026-07-24 | 15:35 | INFO | Normalization done for http://www.webartsy.site/
+2026-07-24 | 15:35 | INFO | Initalizing normalization for http://httpstat.us/503
+2026-07-24 | 15:35 | INFO | Parsing successful for http://httpstat.us/503
+2026-07-24 | 15:35 | INFO | Normalization done for http://httpstat.us/503
+2026-07-24 | 15:35 | INFO | Initalizing http request for https://google.com
+2026-07-24 | 15:35 | INFO | Initalizing http request for https://arif-iqbal.com/main
+2026-07-24 | 15:35 | INFO | Initalizing http request for http://www.webartsy.site/
+2026-07-24 | 15:35 | INFO | Initalizing http request for http://httpstat.us/503
+2026-07-24 | 15:35 | WARNING | Http request failed for http://www.webartsy.site/. Reason: Cannot connect to host www.webartsy.site:80 ssl:default [nodename nor servname provided, or not known]
+2026-07-24 | 15:35 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:35 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:35 | WARNING | Http request failed for https://arif-iqbal.com/main. Reason: Cannot connect to host arif-iqbal.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:35 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:35 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:35 | WARNING | Http request failed for https://google.com. Reason: Cannot connect to host google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:35 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:35 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:35 | INFO | Initalizing http request for http://www.webartsy.site/
+2026-07-24 | 15:35 | WARNING | Http request failed for http://www.webartsy.site/. Reason: Cannot connect to host www.webartsy.site:80 ssl:default [nodename nor servname provided, or not known]
+2026-07-24 | 15:35 | WARNING | Attempt 2 failed!
+2026-07-24 | 15:35 | WARNING | Trying in 2 seconds!
+2026-07-24 | 15:35 | INFO | Initalizing http request for https://arif-iqbal.com/main
+2026-07-24 | 15:35 | INFO | Initalizing http request for https://google.com
+2026-07-24 | 15:35 | WARNING | Http request failed for https://arif-iqbal.com/main. Reason: Cannot connect to host arif-iqbal.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:35 | WARNING | Attempt 2 failed!
+2026-07-24 | 15:35 | WARNING | Trying in 2 seconds!
+2026-07-24 | 15:35 | WARNING | Http request failed for https://google.com. Reason: Cannot connect to host google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:35 | WARNING | Attempt 2 failed!
+2026-07-24 | 15:35 | WARNING | Trying in 2 seconds!
+2026-07-24 | 15:35 | WARNING | Http request failed for http://httpstat.us/503. Reason: 
+2026-07-24 | 15:35 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:35 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:35 | INFO | Initalizing http request for http://www.webartsy.site/
+2026-07-24 | 15:35 | WARNING | Http request failed for http://www.webartsy.site/. Reason: Cannot connect to host www.webartsy.site:80 ssl:default [nodename nor servname provided, or not known]
+2026-07-24 | 15:35 | WARNING | Attempt 3 failed!
+2026-07-24 | 15:35 | WARNING | All 3 attempts exhausted.
+2026-07-24 | 15:35 | INFO | Initalizing status check for http://www.webartsy.site/
+2026-07-24 | 15:35 | INFO | http://www.webartsy.site/ status is WebStatus.DOWN
+2026-07-24 | 15:35 | INFO | Initalizing http request for https://arif-iqbal.com/main
+2026-07-24 | 15:35 | INFO | Initalizing http request for http://httpstat.us/503
+2026-07-24 | 15:35 | INFO | Initalizing http request for https://google.com
+2026-07-24 | 15:35 | WARNING | Http request failed for https://arif-iqbal.com/main. Reason: Cannot connect to host arif-iqbal.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:35 | WARNING | Attempt 3 failed!
+2026-07-24 | 15:35 | WARNING | All 3 attempts exhausted.
+2026-07-24 | 15:35 | INFO | Initalizing status check for https://arif-iqbal.com/main
+2026-07-24 | 15:35 | INFO | https://arif-iqbal.com/main status is WebStatus.DOWN
+2026-07-24 | 15:35 | WARNING | Http request failed for https://google.com. Reason: Cannot connect to host google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:35 | WARNING | Attempt 3 failed!
+2026-07-24 | 15:35 | WARNING | All 3 attempts exhausted.
+2026-07-24 | 15:35 | INFO | Initalizing status check for https://google.com
+2026-07-24 | 15:35 | INFO | https://google.com status is WebStatus.DOWN
+2026-07-24 | 15:35 | WARNING | Http request failed for http://httpstat.us/503. Reason: 
+2026-07-24 | 15:35 | WARNING | Attempt 2 failed!
+2026-07-24 | 15:35 | WARNING | Trying in 2 seconds!
+2026-07-24 | 15:35 | INFO | Initalizing http request for http://httpstat.us/503
+2026-07-24 | 15:35 | WARNING | Http request failed for http://httpstat.us/503. Reason: 
+2026-07-24 | 15:35 | WARNING | Attempt 3 failed!
+2026-07-24 | 15:35 | WARNING | All 3 attempts exhausted.
+2026-07-24 | 15:35 | INFO | Initalizing status check for http://httpstat.us/503
+2026-07-24 | 15:35 | INFO | http://httpstat.us/503 status is WebStatus.DOWN
+2026-07-24 | 15:38 | INFO | Initalizing loader
+2026-07-24 | 15:38 | INFO | Initalizing normalization for https://google.com
+2026-07-24 | 15:38 | INFO | Parsing successful for https://google.com
+2026-07-24 | 15:38 | INFO | Normalization done for https://google.com
+2026-07-24 | 15:38 | INFO | Initalizing normalization for https://github.com
+2026-07-24 | 15:38 | INFO | Parsing successful for https://github.com
+2026-07-24 | 15:38 | INFO | Normalization done for https://github.com
+2026-07-24 | 15:38 | INFO | Initalizing normalization for https://openai.com
+2026-07-24 | 15:38 | INFO | Parsing successful for https://openai.com
+2026-07-24 | 15:38 | INFO | Normalization done for https://openai.com
+2026-07-24 | 15:38 | INFO | Initalizing normalization for https://webartsy.nl
+2026-07-24 | 15:38 | INFO | Parsing successful for https://webartsy.nl
+2026-07-24 | 15:38 | INFO | Normalization done for https://webartsy.nl
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://google.com
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://github.com
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://openai.com
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://webartsy.nl
+2026-07-24 | 15:38 | WARNING | Http request failed for https://github.com. Reason: Cannot connect to host github.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:38 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:38 | WARNING | Http request failed for https://openai.com. Reason: Cannot connect to host openai.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:38 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:38 | WARNING | Http request failed for https://google.com. Reason: Cannot connect to host google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:38 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:38 | WARNING | Http request failed for https://webartsy.nl. Reason: Cannot connect to host webartsy.nl:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:38 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://github.com
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://openai.com
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://google.com
+2026-07-24 | 15:38 | WARNING | Http request failed for https://github.com. Reason: Cannot connect to host github.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 2 failed!
+2026-07-24 | 15:38 | WARNING | Trying in 2 seconds!
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://webartsy.nl
+2026-07-24 | 15:38 | WARNING | Http request failed for https://google.com. Reason: Cannot connect to host google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 2 failed!
+2026-07-24 | 15:38 | WARNING | Trying in 2 seconds!
+2026-07-24 | 15:38 | WARNING | Http request failed for https://webartsy.nl. Reason: Cannot connect to host webartsy.nl:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 2 failed!
+2026-07-24 | 15:38 | WARNING | Trying in 2 seconds!
+2026-07-24 | 15:38 | WARNING | Http request failed for https://openai.com. Reason: Cannot connect to host openai.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 2 failed!
+2026-07-24 | 15:38 | WARNING | Trying in 2 seconds!
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://github.com
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://google.com
+2026-07-24 | 15:38 | WARNING | Http request failed for https://github.com. Reason: Cannot connect to host github.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 3 failed!
+2026-07-24 | 15:38 | WARNING | All 3 attempts exhausted.
+2026-07-24 | 15:38 | INFO | Initalizing status check for https://github.com
+2026-07-24 | 15:38 | INFO | https://github.com status is WebStatus.DOWN
+2026-07-24 | 15:38 | WARNING | Http request failed for https://google.com. Reason: Cannot connect to host google.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 3 failed!
+2026-07-24 | 15:38 | WARNING | All 3 attempts exhausted.
+2026-07-24 | 15:38 | INFO | Initalizing status check for https://google.com
+2026-07-24 | 15:38 | INFO | https://google.com status is WebStatus.DOWN
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://webartsy.nl
+2026-07-24 | 15:38 | WARNING | Http request failed for https://webartsy.nl. Reason: Cannot connect to host webartsy.nl:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 3 failed!
+2026-07-24 | 15:38 | WARNING | All 3 attempts exhausted.
+2026-07-24 | 15:38 | INFO | Initalizing status check for https://webartsy.nl
+2026-07-24 | 15:38 | INFO | https://webartsy.nl status is WebStatus.DOWN
+2026-07-24 | 15:38 | INFO | Initalizing http request for https://openai.com
+2026-07-24 | 15:38 | WARNING | Http request failed for https://openai.com. Reason: Cannot connect to host openai.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-07-24 | 15:38 | WARNING | Attempt 3 failed!
+2026-07-24 | 15:38 | WARNING | All 3 attempts exhausted.
+2026-07-24 | 15:38 | INFO | Initalizing status check for https://openai.com
+2026-07-24 | 15:38 | INFO | https://openai.com status is WebStatus.DOWN
+2026-07-24 | 15:43 | INFO | Initalizing loader
+2026-07-24 | 15:43 | INFO | Initalizing normalization for https://google.com
+2026-07-24 | 15:43 | INFO | Parsing successful for https://google.com
+2026-07-24 | 15:43 | INFO | Normalization done for https://google.com
+2026-07-24 | 15:43 | INFO | Initalizing normalization for https://github.com
+2026-07-24 | 15:43 | INFO | Parsing successful for https://github.com
+2026-07-24 | 15:43 | INFO | Normalization done for https://github.com
+2026-07-24 | 15:43 | INFO | Initalizing normalization for https://openai.com
+2026-07-24 | 15:43 | INFO | Parsing successful for https://openai.com
+2026-07-24 | 15:43 | INFO | Normalization done for https://openai.com
+2026-07-24 | 15:43 | INFO | Initalizing normalization for https://webartsy.nl
+2026-07-24 | 15:43 | INFO | Parsing successful for https://webartsy.nl
+2026-07-24 | 15:43 | INFO | Normalization done for https://webartsy.nl
+2026-07-24 | 15:43 | INFO | Initalizing http request for https://google.com
+2026-07-24 | 15:43 | INFO | Initalizing http request for https://github.com
+2026-07-24 | 15:43 | INFO | Initalizing http request for https://openai.com
+2026-07-24 | 15:43 | INFO | Initalizing http request for https://webartsy.nl
+2026-07-24 | 15:43 | INFO | Successful http request for https://openai.com
+2026-07-24 | 15:43 | WARNING | Server or client Error https://openai.com
+2026-07-24 | 15:43 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:43 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:43 | INFO | Successful http request for https://webartsy.nl
+2026-07-24 | 15:43 | INFO | Successful http request for https://github.com
+2026-07-24 | 15:43 | INFO | Initalizing status check for https://webartsy.nl
+2026-07-24 | 15:43 | INFO | https://webartsy.nl status is WebStatus.UP
+2026-07-24 | 15:43 | INFO | Successful http request for https://google.com
+2026-07-24 | 15:43 | INFO | Initalizing status check for https://google.com
+2026-07-24 | 15:43 | INFO | https://google.com status is WebStatus.UP
+2026-07-24 | 15:43 | INFO | Initalizing http request for https://openai.com
+2026-07-24 | 15:43 | INFO | Successful http request for https://openai.com
+2026-07-24 | 15:43 | WARNING | Server or client Error https://openai.com
+2026-07-24 | 15:43 | WARNING | Attempt 2 failed!
+2026-07-24 | 15:43 | WARNING | Trying in 2 seconds!
+2026-07-24 | 15:43 | WARNING | Http request failed for https://github.com. Reason: 
+2026-07-24 | 15:43 | WARNING | Attempt 1 failed!
+2026-07-24 | 15:43 | WARNING | Trying in 1 seconds!
+2026-07-24 | 15:43 | INFO | Initalizing http request for https://openai.com
+2026-07-24 | 15:43 | INFO | Successful http request for https://openai.com
+2026-07-24 | 15:43 | WARNING | Server or client Error https://openai.com
+2026-07-24 | 15:43 | WARNING | Attempt 3 failed!
+2026-07-24 | 15:43 | WARNING | All 3 attempts exhausted.
+2026-07-24 | 15:43 | INFO | Initalizing status check for https://openai.com
+2026-07-24 | 15:43 | INFO | https://openai.com status is WebStatus.DEGRADED
+2026-07-24 | 15:43 | INFO | Initalizing http request for https://github.com
+2026-07-24 | 15:43 | INFO | Successful http request for https://github.com
+2026-07-24 | 15:43 | INFO | Initalizing status check for https://github.com
+2026-07-24 | 15:43 | INFO | https://github.com status is WebStatus.UP
+2026-07-24 | 16:03 | INFO | Initializing loader
+2026-07-24 | 16:04 | INFO | Initializing loader
+2026-07-24 | 16:05 | INFO | Initializing loader
+2026-07-24 | 16:05 | INFO | Initializing loader
+2026-07-24 | 16:05 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 16:05 | INFO | Normalization completed for https://google.com
+2026-07-24 | 16:05 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 16:05 | INFO | Normalization completed for https://github.com
+2026-07-24 | 16:05 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 16:05 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 16:05 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 16:05 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 16:05 | WARNING | Attempt 1 failed!
+2026-07-24 | 16:05 | WARNING | Attempt 1 failed!
+2026-07-24 | 16:05 | WARNING | Attempt 1 failed!
+2026-07-24 | 16:05 | WARNING | Attempt 1 failed!
+2026-07-24 | 16:05 | ERROR | 'AttributeError' object has no attribute 'failure_type' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:05 | ERROR | 'AttributeError' object has no attribute 'failure_type' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:05 | ERROR | 'AttributeError' object has no attribute 'failure_type' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:05 | ERROR | 'AttributeError' object has no attribute 'failure_type' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:08 | INFO | Initializing loader
+2026-07-24 | 16:08 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 16:08 | INFO | Normalization completed for https://google.com
+2026-07-24 | 16:08 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 16:08 | INFO | Normalization completed for https://github.com
+2026-07-24 | 16:08 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 16:08 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 16:08 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 16:08 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 16:08 | ERROR | Unexpected error during retry operation.
+Traceback (most recent call last):
+  File "/Users/admin/work/python/system-monitor/src/helpers/retry.py", line 28, in retry
+    return await operation()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/admin/work/python/system-monitor/src/services/observe_website.py", line 28, in observe_website
+    logger.info(f"Initalizing http request for {website.URL}")
+                                                ^^^^^^^^^^^
+AttributeError: 'Website' object has no attribute 'URL'
+2026-07-24 | 16:08 | ERROR | Unexpected error during retry operation.
+Traceback (most recent call last):
+  File "/Users/admin/work/python/system-monitor/src/helpers/retry.py", line 28, in retry
+    return await operation()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/admin/work/python/system-monitor/src/services/observe_website.py", line 28, in observe_website
+    logger.info(f"Initalizing http request for {website.URL}")
+                                                ^^^^^^^^^^^
+AttributeError: 'Website' object has no attribute 'URL'
+2026-07-24 | 16:08 | ERROR | Unexpected error during retry operation.
+Traceback (most recent call last):
+  File "/Users/admin/work/python/system-monitor/src/helpers/retry.py", line 28, in retry
+    return await operation()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/admin/work/python/system-monitor/src/services/observe_website.py", line 28, in observe_website
+    logger.info(f"Initalizing http request for {website.URL}")
+                                                ^^^^^^^^^^^
+AttributeError: 'Website' object has no attribute 'URL'
+2026-07-24 | 16:08 | ERROR | Unexpected error during retry operation.
+Traceback (most recent call last):
+  File "/Users/admin/work/python/system-monitor/src/helpers/retry.py", line 28, in retry
+    return await operation()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/admin/work/python/system-monitor/src/services/observe_website.py", line 28, in observe_website
+    logger.info(f"Initalizing http request for {website.URL}")
+                                                ^^^^^^^^^^^
+AttributeError: 'Website' object has no attribute 'URL'
+2026-07-24 | 16:08 | ERROR | 'Website' object has no attribute 'URL' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:08 | ERROR | 'Website' object has no attribute 'URL' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:08 | ERROR | 'Website' object has no attribute 'URL' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:08 | ERROR | 'Website' object has no attribute 'URL' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:08 | INFO | Initializing loader
+2026-07-24 | 16:08 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 16:08 | INFO | Normalization completed for https://google.com
+2026-07-24 | 16:08 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 16:08 | INFO | Normalization completed for https://github.com
+2026-07-24 | 16:08 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 16:08 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 16:08 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 16:08 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 16:08 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 16:08 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 16:08 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:08 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 16:08 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:08 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 16:08 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:08 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 16:08 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 16:08 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 16:08 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:08 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 16:08 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:08 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:08 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 16:08 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 16:08 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:09 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:09 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:09 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 16:09 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 16:09 | ERROR | 'Website' object has no attribute 'URL' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:09 | ERROR | 'Website' object has no attribute 'URL' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:09 | ERROR | 'Website' object has no attribute 'URL' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:09 | ERROR | 'Website' object has no attribute 'URL' : 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:10 | INFO | Initializing loader
+2026-07-24 | 16:10 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 16:10 | INFO | Normalization completed for https://google.com
+2026-07-24 | 16:10 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 16:10 | INFO | Normalization completed for https://github.com
+2026-07-24 | 16:10 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 16:10 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 16:10 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 16:10 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 16:10 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 16:10 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 16:10 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:10 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 16:10 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 16:10 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:10 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:10 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 16:10 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 16:10 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 16:10 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 16:10 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:10 | INFO | Initializing status check for https://google.com
+2026-07-24 | 16:10 | INFO | https://google.com status is UP
+2026-07-24 | 16:10 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:10 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:10 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 16:10 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 16:10 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 16:10 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 16:10 | INFO | Initializing status check for https://github.com
+2026-07-24 | 16:10 | INFO | https://github.com status is UP
+2026-07-24 | 16:10 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:10 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:10 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:10 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 16:10 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 16:10 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 16:10 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 16:10 | ERROR | WebsiteReport(website=Website(url='https://google.com', type=<WebsiteType.GENERIC: 'generic'>), status='UP', response_time=None, http_code=200, failure='NONE', id=UUID('9c2e5dac-7587-4879-80bb-aec02a0e39f6'), timestamp=datetime.datetime(2026, 7, 24, 16, 10, 10, 969799)) : 'Website' object has no attribute 'URL'
+2026-07-24 | 16:10 | ERROR | WebsiteReport(website=Website(url='https://github.com', type=<WebsiteType.GENERIC: 'generic'>), status='UP', response_time=None, http_code=200, failure='NONE', id=UUID('d120af5f-3fd8-467f-af07-9ad92fa24263'), timestamp=datetime.datetime(2026, 7, 24, 16, 10, 11, 643775)) : 'Website' object has no attribute 'URL'
+2026-07-24 | 16:10 | ERROR | WebsiteReport(website=Website(url='https://openai.com', type=<WebsiteType.GENERIC: 'generic'>), status='DEGRADED', response_time=None, http_code=None, failure='HTTP', id=UUID('66760e2a-1e8e-459d-a464-91791802ea5b'), timestamp=datetime.datetime(2026, 7, 24, 16, 10, 13, 376617)) : 'Website' object has no attribute 'URL'
+2026-07-24 | 16:10 | ERROR | WordpressObserver.observe() missing 1 required positional argument: 'session' : 'TypeError' object has no attribute 'website'
+2026-07-24 | 16:12 | INFO | Initializing loader
+2026-07-24 | 16:12 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 16:12 | INFO | Normalization completed for https://google.com
+2026-07-24 | 16:12 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 16:12 | INFO | Normalization completed for https://github.com
+2026-07-24 | 16:12 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 16:12 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 16:12 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 16:12 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 16:12 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 16:12 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 16:12 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:12 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 16:12 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 16:12 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:12 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:12 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 16:12 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 16:12 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 16:12 | INFO | Initializing status check for https://github.com
+2026-07-24 | 16:12 | INFO | https://github.com status is UP
+2026-07-24 | 16:12 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:12 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 16:12 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 16:12 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 16:12 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:12 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:12 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 16:12 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 16:12 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 16:12 | INFO | Initializing status check for https://google.com
+2026-07-24 | 16:12 | INFO | https://google.com status is UP
+2026-07-24 | 16:12 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:12 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:12 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:12 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 16:12 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 16:12 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 16:12 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 16:12 | ERROR | WordpressReport(generic=CheckResult(website=Website(url='https://webartsy.nl', type=<WebsiteType.WORDPRESS: 'wordpress'>), response_time=None, http_code=200, failure=WebsiteFailure(type=<WebsiteFailureTypes.NONE: 1>, message=None)), wordpress_version=None, rest_api=False, xmlrpc=True, login_page=True, database_error=False, maintenance_mode=False): 'WordpressReport' object has no attribute 'website'
+2026-07-24 | 16:17 | INFO | Initializing loader
+2026-07-24 | 16:17 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 16:17 | INFO | Normalization completed for https://google.com
+2026-07-24 | 16:17 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 16:17 | INFO | Normalization completed for https://github.com
+2026-07-24 | 16:17 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 16:17 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 16:17 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 16:17 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 16:17 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 16:17 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 16:17 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:17 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 16:17 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:17 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:17 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 16:17 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 16:17 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 16:17 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 16:17 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 16:17 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 16:17 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 16:17 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:17 | INFO | Initializing status check for https://google.com
+2026-07-24 | 16:17 | INFO | https://google.com status is UP
+2026-07-24 | 16:17 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:17 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:17 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 16:17 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 16:17 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 16:17 | WARNING | Timeout for https://github.com: 
+2026-07-24 | 16:17 | WARNING | Attempt 1/3 failed: 
+2026-07-24 | 16:17 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 16:17 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:17 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:17 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:17 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 16:17 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 16:17 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 16:17 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 16:17 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 16:17 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 16:17 | INFO | Initializing status check for https://github.com
+2026-07-24 | 16:17 | INFO | https://github.com status is UP
+2026-07-24 | 16:17 | ERROR | 'CheckResult' object has no attribute 'status': 'AttributeError' object has no attribute 'website'
+2026-07-24 | 16:18 | INFO | Initializing loader
+2026-07-24 | 16:18 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 16:18 | INFO | Normalization completed for https://google.com
+2026-07-24 | 16:18 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 16:18 | INFO | Normalization completed for https://github.com
+2026-07-24 | 16:18 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 16:18 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 16:18 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 16:18 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 16:18 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 16:18 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 16:18 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:18 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 16:18 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 16:18 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:18 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:18 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 16:18 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 16:18 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 16:18 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 16:18 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 16:18 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 16:18 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:18 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 16:18 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:18 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:18 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 16:18 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 16:18 | INFO | Initializing status check for https://google.com
+2026-07-24 | 16:18 | INFO | https://google.com status is UP
+2026-07-24 | 16:18 | INFO | Initializing status check for https://github.com
+2026-07-24 | 16:18 | INFO | https://github.com status is UP
+2026-07-24 | 16:18 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:18 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:18 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:18 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 16:18 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 16:18 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 16:18 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 16:20 | INFO | Initializing loader
+2026-07-24 | 16:20 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 16:20 | INFO | Normalization completed for https://google.com
+2026-07-24 | 16:20 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 16:20 | INFO | Normalization completed for https://github.com
+2026-07-24 | 16:20 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 16:20 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 16:20 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 16:20 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 16:20 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 16:20 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 16:20 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:20 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 16:20 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:20 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:20 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 16:20 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 16:20 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 16:20 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 16:20 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:20 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 16:20 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 16:20 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 16:20 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:20 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:20 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 16:20 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 16:20 | INFO | Initializing status check for https://github.com
+2026-07-24 | 16:20 | INFO | https://github.com status is UP
+2026-07-24 | 16:20 | WARNING | Timeout for https://google.com: 
+2026-07-24 | 16:20 | WARNING | Attempt 1/3 failed: 
+2026-07-24 | 16:20 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 16:20 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:20 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 16:20 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:20 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:20 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 16:20 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 16:20 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 16:20 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 16:20 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 16:20 | INFO | Initializing status check for https://google.com
+2026-07-24 | 16:20 | INFO | https://google.com status is UP
+2026-07-24 | 16:52 | INFO | Initializing loader
+2026-07-24 | 16:52 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 16:52 | INFO | Normalization completed for https://google.com
+2026-07-24 | 16:52 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 16:52 | INFO | Normalization completed for https://github.com
+2026-07-24 | 16:52 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 16:52 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 16:52 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 16:52 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 16:52 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 16:52 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 16:52 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:52 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 16:52 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:52 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:52 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 16:52 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 16:52 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 16:52 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 16:52 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 16:52 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 16:52 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 16:52 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 16:52 | INFO | Initializing status check for https://google.com
+2026-07-24 | 16:52 | INFO | https://google.com status is UP
+2026-07-24 | 16:52 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:52 | INFO | Initializing status check for https://github.com
+2026-07-24 | 16:52 | INFO | https://github.com status is UP
+2026-07-24 | 16:52 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:52 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:52 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 16:52 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 16:52 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 16:52 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 16:52 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 16:52 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 16:52 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 16:52 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 16:52 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 17:29 | INFO | Initializing loader
+2026-07-24 | 17:29 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 17:29 | INFO | Normalization completed for https://google.com
+2026-07-24 | 17:29 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 17:29 | INFO | Normalization completed for https://github.com
+2026-07-24 | 17:29 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 17:29 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 17:29 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 17:29 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 17:47 | INFO | Initializing loader
+2026-07-24 | 17:47 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 17:47 | INFO | Normalization completed for https://google.com
+2026-07-24 | 17:47 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 17:47 | INFO | Normalization completed for https://github.com
+2026-07-24 | 17:47 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 17:47 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 17:47 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 17:47 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 17:47 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 17:47 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 17:47 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:47 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 17:47 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 17:47 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:47 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:47 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 17:47 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 17:47 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 17:47 | INFO | Initializing status check for https://github.com
+2026-07-24 | 17:47 | INFO | https://github.com status is UP
+2026-07-24 | 17:47 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 17:47 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 17:47 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 17:47 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:47 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:47 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:47 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 17:47 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 17:47 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 17:47 | INFO | Initializing status check for https://google.com
+2026-07-24 | 17:47 | INFO | https://google.com status is UP
+2026-07-24 | 17:47 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:47 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:47 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:47 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 17:47 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 17:47 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 17:47 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 17:50 | INFO | Initializing loader
+2026-07-24 | 17:50 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 17:50 | INFO | Normalization completed for https://google.com
+2026-07-24 | 17:50 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 17:50 | INFO | Normalization completed for https://github.com
+2026-07-24 | 17:50 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 17:50 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 17:50 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 17:50 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 17:50 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 17:50 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 17:50 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:50 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 17:50 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 17:50 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:50 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:50 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 17:50 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 17:50 | INFO | Initializing status check for https://github.com
+2026-07-24 | 17:50 | INFO | https://github.com status is UP
+2026-07-24 | 17:50 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 17:50 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 17:50 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 17:50 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 17:50 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:50 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:50 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:50 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 17:50 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 17:50 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 17:50 | INFO | Initializing status check for https://google.com
+2026-07-24 | 17:50 | INFO | https://google.com status is UP
+2026-07-24 | 17:50 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:50 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:50 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:50 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 17:50 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 17:50 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 17:50 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 17:52 | INFO | Initializing loader
+2026-07-24 | 17:52 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 17:52 | INFO | Normalization completed for https://google.com
+2026-07-24 | 17:52 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 17:52 | INFO | Normalization completed for https://github.com
+2026-07-24 | 17:52 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 17:52 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 17:52 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 17:52 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 17:52 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 17:52 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 17:52 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:52 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 17:52 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 17:52 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:52 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:52 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 17:52 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 17:52 | INFO | Initializing status check for https://github.com
+2026-07-24 | 17:52 | INFO | https://github.com status is UP
+2026-07-24 | 17:52 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 17:52 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 17:52 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 17:52 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 17:52 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:52 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:52 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:52 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 17:52 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 17:52 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 17:52 | INFO | Initializing status check for https://google.com
+2026-07-24 | 17:52 | INFO | https://google.com status is UP
+2026-07-24 | 17:52 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:52 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:52 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:52 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 17:52 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 17:52 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 17:52 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 17:53 | INFO | Initializing loader
+2026-07-24 | 17:53 | INFO | Initializing normalization for https://google.com
+2026-07-24 | 17:53 | INFO | Normalization completed for https://google.com
+2026-07-24 | 17:53 | INFO | Initializing normalization for https://github.com
+2026-07-24 | 17:53 | INFO | Normalization completed for https://github.com
+2026-07-24 | 17:53 | INFO | Initializing normalization for https://openai.com
+2026-07-24 | 17:53 | INFO | Normalization completed for https://openai.com
+2026-07-24 | 17:53 | INFO | Initializing normalization for https://webartsy.nl
+2026-07-24 | 17:53 | INFO | Normalization completed for https://webartsy.nl
+2026-07-24 | 17:53 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 17:53 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 17:53 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:53 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 17:53 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 17:53 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:53 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:53 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 17:53 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 17:53 | INFO | Initializing status check for https://github.com
+2026-07-24 | 17:53 | INFO | https://github.com status is UP
+2026-07-24 | 17:53 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 17:53 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 17:53 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 17:53 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 17:53 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:53 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:53 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:53 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 17:53 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 17:53 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 17:53 | INFO | Initializing status check for https://google.com
+2026-07-24 | 17:53 | INFO | https://google.com status is UP
+2026-07-24 | 17:53 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:53 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:53 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:53 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 17:53 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 17:53 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 17:53 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 17:54 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 17:54 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 17:54 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:54 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 17:54 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:54 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:54 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 17:54 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 17:54 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 17:54 | INFO | Initializing status check for https://github.com
+2026-07-24 | 17:54 | INFO | https://github.com status is UP
+2026-07-24 | 17:54 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 17:54 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 17:54 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 17:54 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 17:54 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:54 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:54 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:54 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 17:54 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 17:54 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 17:54 | INFO | Initializing status check for https://google.com
+2026-07-24 | 17:54 | INFO | https://google.com status is UP
+2026-07-24 | 17:54 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:54 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:54 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:54 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 17:54 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 17:54 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 17:54 | INFO | https://openai.com status is DEGRADED
+2026-07-24 | 17:55 | INFO | Initializing HTTP request for https://google.com
+2026-07-24 | 17:55 | INFO | Initializing HTTP request for https://github.com
+2026-07-24 | 17:55 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:55 | INFO | Initializing HTTP request for https://webartsy.nl
+2026-07-24 | 17:55 | INFO | Successful HTTP request for https://github.com
+2026-07-24 | 17:55 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:55 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:55 | WARNING | Attempt 1/3 failed: 403
+2026-07-24 | 17:55 | INFO | Retrying in 1 second(s)...
+2026-07-24 | 17:55 | INFO | Initializing status check for https://github.com
+2026-07-24 | 17:55 | INFO | https://github.com status is UP
+2026-07-24 | 17:55 | INFO | Successful HTTP request for https://webartsy.nl
+2026-07-24 | 17:55 | INFO | Initializing status check for https://webartsy.nl
+2026-07-24 | 17:55 | INFO | https://webartsy.nl status is UP
+2026-07-24 | 17:55 | INFO | Initializing WordPress observer for https://webartsy.nl
+2026-07-24 | 17:55 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:55 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:55 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:55 | WARNING | Attempt 2/3 failed: 403
+2026-07-24 | 17:55 | INFO | Retrying in 2 second(s)...
+2026-07-24 | 17:55 | INFO | Successful HTTP request for https://google.com
+2026-07-24 | 17:55 | INFO | Initializing status check for https://google.com
+2026-07-24 | 17:55 | INFO | https://google.com status is UP
+2026-07-24 | 17:55 | INFO | Initializing HTTP request for https://openai.com
+2026-07-24 | 17:55 | INFO | Successful HTTP request for https://openai.com
+2026-07-24 | 17:55 | WARNING | HTTP 403 returned by https://openai.com
+2026-07-24 | 17:55 | WARNING | Attempt 3/3 failed: 403
+2026-07-24 | 17:55 | WARNING | All 3 retry attempts exhausted.
+2026-07-24 | 17:55 | INFO | Initializing status check for https://openai.com
+2026-07-24 | 17:55 | INFO | https://openai.com status is DEGRADED

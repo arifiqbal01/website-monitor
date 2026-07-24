@@ -1,17 +1,35 @@
 from src.helpers.logger import logger
-from src.domain.model import WebStatus, Website, CheckResult, WebsiteFailureTypes, WebsiteFailure
+from src.domain.model import (
+    WebStatus,
+    CheckResult,
+    WebsiteFailureTypes,
+)
 
-def  status_checker(result):
-     logger.info(f"Initalizing status check for {result.website.URL}")
-     if result.http_code in range(200, 400) and result.failure.type == WebsiteFailureTypes.NONE:
-          logger.info(f"{result.website.URL} status is {WebStatus.UP}")
-          return WebStatus.UP
-     elif result.failure.type == WebsiteFailureTypes.SEMANTIC or result.failure.type == WebsiteFailureTypes.HTTP:
-          logger.info(f"{result.website.URL} status is {WebStatus.DEGRADED}")
-          return WebStatus.DEGRADED
-     elif result.failure.type != WebsiteFailureTypes.NONE and result.http_code == None:
-          logger.info(f"{result.website.URL} status is {WebStatus.DOWN}")
-          return WebStatus.DOWN
-     else:
-          logger.info(f"{result.website.URL} status is {WebStatus.UNKNOWN}")
-          return WebStatus.UNKNOWN
+
+def status_checker(result: CheckResult) -> WebStatus:
+    logger.info(f"Initializing status check for {result.website.url}")
+
+    if (
+        result.http_code is not None
+        and 200 <= result.http_code < 400
+        and result.failure.type == WebsiteFailureTypes.NONE
+    ):
+        logger.info(f"{result.website.url} status is {WebStatus.UP.name}")
+        return WebStatus.UP
+
+    elif result.failure.type in (
+        WebsiteFailureTypes.SEMANTIC,
+        WebsiteFailureTypes.HTTP,
+    ):
+        logger.info(f"{result.website.url} status is {WebStatus.DEGRADED.name}")
+        return WebStatus.DEGRADED
+
+    elif (
+        result.failure.type != WebsiteFailureTypes.NONE
+        and result.http_code is None
+    ):
+        logger.info(f"{result.website.url} status is {WebStatus.DOWN.name}")
+        return WebStatus.DOWN
+
+    logger.info(f"{result.website.url} status is {WebStatus.UNKNOWN.name}")
+    return WebStatus.UNKNOWN
