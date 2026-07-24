@@ -1,6 +1,10 @@
 name: Website Monitor Test
 
 on:
+  push:
+    branches:
+      - main
+      
   schedule:
     # Every 5 minutes
     - cron: "7,22,37,52 * * * *"    

@@ -13,6 +13,7 @@ __pycache__/
 
 # VS Code
 .vscode/
+.vscode
 
 # JetBrains IDEs
 .idea/
@@ -21,8 +22,9 @@ __pycache__/
 logs/
 *.log
 
-# Generated Reports
 reports/
+*.db
+*.sqlite3
 
 # Test & Coverage
 .pytest_cache/
