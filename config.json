@@ -6,19 +6,35 @@
   },
   "websites": [
     {
-      "url": "https://google.com",
-      "type": "generic"
-    },
-    {
-      "url": "https://github.com",
-      "type": "generic"
-    },
-    {
-      "url": "https://openai.com",
-      "type": "generic"
-    },
-    {
       "url": "https://webartsy.nl",
+      "type": "wordpress"
+    },
+    {
+      "url": "https://deeerstelijn.com",
+      "type": "wordpress"
+    },
+    {
+      "url": "https://arif-iqbal.com",
+      "type": "wordpress"
+    },
+    {
+      "url": "https://mordivo.com",
+      "type": "wordpress"
+    },
+    {
+      "url": "https://al-wissaam.com",
+      "type": "wordpress"
+    },
+    {
+      "url": "https://www.detweedelijns.nl",
+      "type": "wordpress"
+    },
+    {
+      "url": "https://www.autply.com",
+      "type": "wordpress"
+    },
+    {
+      "url": "https://apicares.com.pk",
       "type": "wordpress"
     }
   ]
