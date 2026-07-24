@@ -1,254 +1,270 @@
 # Website Monitor
 
-A Python tool that monitors website availability, response health, and semantic failures (e.g. suspended hosting, expired domains), built as a learning project to practice domain modeling and async I/O, and extended gradually as new features are added.
+A Python-based website monitoring system that checks website availability, response health, and semantic failures. The project began as a learning exercise to explore asynchronous programming, networking, clean architecture, and domain modeling while building a practical monitoring tool.
 
-This is not a polished product. It's a working system built to understand real concepts — async networking, failure classification, and separating domain logic from I/O, without relying on AI to write the code. AI was used to understand concepts, not to generate the implementation.
+Rather than relying only on HTTP status codes, the monitor attempts to determine whether a website is actually functioning correctly by detecting common semantic failures such as suspended hosting, expired domains, and WordPress-specific issues.
 
-## What it does
-
-- Checks a list of websites on a fixed interval
-- Classifies each result into a status: **UP**, **DOWN**, **DEGRADED**, or **UNKNOWN**
-- Detects not just outages, but *semantic* failures — pages that return HTTP 200 but contain signals like "domain has expired" or "hosting account suspended"
-- Writes a plain-text summary report after each check cycle
-
-## Example output
-=======
-A Python project for monitoring website availability, response health, and semantic failures (such as expired domains or suspended hosting).
-
-The project was started as a learning exercise to explore asynchronous programming, networking, error handling, and clean application architecture while building a practical monitoring tool. The goal is to gradually evolve the project by implementing real-world monitoring features one step at a time.
-
-AI was used to understand concepts and architecture throughout the learning process, while the implementation itself was written manually.
+The implementation was written manually as part of the learning process. AI was used to understand concepts, architecture, and design decisions—not to generate the application itself.
 
 ---
 
-## Project Goals
+# Features
 
-This project was designed to explore several real-world software engineering concepts, including:
-
-- HTTP networking
-- Asynchronous programming
-- Error handling
-- Logging
-- Configuration management
-- Data recording
-- Domain modeling
-- Maintainable project structure
-- Long-running automation
-
-The intention is to build the system incrementally instead of implementing every feature at once.
-
----
-
-## Current Features
+## Website Monitoring
 
 - Monitor multiple HTTP/HTTPS websites
-- Concurrent website checks using `asyncio` and `aiohttp`
+- Concurrent checks using `asyncio`
+- Configurable request timeout
+- Automatic retry with exponential backoff
 - Measure response time
-- Classify website status as:
-  - UP
-  - DOWN
-  - DEGRADED
-  - UNKNOWN
-- Detect semantic failures such as:
-  - Domain expired
-  - Hosting suspended
-  - Placeholder pages
-- Generate summary reports after each monitoring cycle
-- Configurable website list
-- Typed failure classification using domain models
+- Record HTTP status codes
+
+## Status Classification
+
+Each website is classified into one of four states:
+
+- **UP**
+- **DOWN**
+- **DEGRADED**
+- **UNKNOWN**
+
+Unlike traditional uptime monitors, a website returning `200 OK` is not automatically considered healthy.
+
+## Semantic Failure Detection
+
+Detects pages that technically respond but are not functioning correctly, including:
+
+- Expired domains
+- Hosting suspended
+- Placeholder pages
+- Error pages returned with HTTP 200
+
+These websites are reported as **DEGRADED** rather than **UP**.
+
+## WordPress Monitoring
+
+For WordPress websites the monitor performs additional health checks including:
+
+- WordPress version detection
+- REST API availability
+- XML-RPC availability
+- Login page accessibility
+- Database error detection
+- Maintenance mode detection
+
+## Notifications
+
+- Slack webhook notifications
+- State-change notifications
+- Initial failure notifications
+
+## Reporting
+
+After every monitoring run the project generates:
+
+- Plain-text summary report
+- WordPress diagnostic report
+
+## Persistence
+
+Monitoring history is stored in SQLite.
 
 ---
 
-## Why "DEGRADED" Exists
-
-Most uptime monitors rely only on HTTP status codes.
-
-A website can return `200 OK` while displaying:
-
-- Domain has expired
-- Hosting account suspended
-- Maintenance placeholder
-
-Although the server is responding, the website is not functioning correctly.
-
-Instead of reporting these cases as **UP**, this project classifies them as **DEGRADED**.
-
----
-
-## Example Report
-
-```text
-Report Summary
-
-Total: 4
-UP: 1
-DOWN: 1
-DEGRADED: 2
-
-UP
-https://google.com
-
-DOWN
-http://httpstat.us/503
-
-DEGRADED
-https://arif-iqbal.com/main
-http://www.webartsy.site/
-```
-
----
-
-## Project Structure
+# Project Structure
 
 ```
 src/
+├── config/
+│   ├── loader.py
+│   └── __init__.py
+│
+├── database/
+│
 ├── domain/
 │   ├── model.py
 │   └── exceptions.py
 │
+├── evaluators/
+│
+├── helpers/
+│
+├── notifications/
+│
+├── processors/
+│
+├── repositories/
+│
 ├── services/
-│   ├── observer.py
+│   ├── observe_website.py
+│   ├── observe_wordpress.py
 │   ├── status_checker.py
 │   └── summary_maker.py
 │
-├── helpers/
-│   ├── loader.py
-│   ├── logger.py
-│   ├── normalize_url.py
-│   ├── retry.py
-│   └── now.py
-│
-├── main.py
-└── run_monitor.py
+├── run_monitor.py
+└── main.py
 ```
 
 ---
 
-## Architecture
+# Architecture
 
 ```
 Configuration
         │
         ▼
-Load Website List
+Load Websites
         │
         ▼
-Observer (Async HTTP Checks)
+Website Observer
         │
         ▼
-Status Checker
+Website Report
         │
         ▼
-Summary Generator
+WordPress Observer (optional)
         │
         ▼
-Report Output
+WordPress Report
+        │
+        ▼
+Result Processor
+        ├─────────────┐
+        ▼             ▼
+SQLite          Notification Evaluator
+                      │
+                      ▼
+                Slack Notification
 ```
 
-The observer performs network operations while the status checker remains pure business logic, making status classification deterministic and easy to extend.
+The project separates domain logic from infrastructure so that networking, persistence, and notifications remain independent from business rules.
 
 ---
 
-## Technologies
+# Technologies
 
-- Python 3.11+
+- Python 3.12+
 - asyncio
 - aiohttp
+- SQLite
 - dataclasses
-- Enum-based domain models
+- Enum
+- GitHub Actions
+- python-dotenv
 
 ---
 
-## Original Requirements
+# Running Locally
 
-The project was initially planned with the following objectives:
-
-### Website Monitoring
-
-- Monitor one or more websites
-- Measure response time
-- Record HTTP status codes
-- Detect UP and DOWN states
-
-### Failure Handling
-
-- Invalid domains
-- DNS failures
-- Connection failures
-- SSL errors
-- Timeouts
-- Internet outages
-
-### Data Recording
-
-Persist monitoring data including:
-
-- Timestamp
-- URL
-- Status
-- HTTP status code
-- Response time
-
-### Logging
-
-Maintain readable logs for:
-
-- Successful checks
-- Failures
-- Exceptions
-
-### Automation
-
-- Run continuously
-- Recover safely after restart
-- Avoid hardcoded configuration
-
-### Extensibility
-
-The architecture should support future additions such as:
-
-- Email alerts
-- Telegram notifications
-- Charts
-- Daily summaries
-- Cloud deployment
-
----
-
-## Current Status
-
-### Implemented
-
-- Async website monitoring
-- Response timing
-- Status classification
-- Semantic failure detection
-- Configurable website list
-- Summary reporting
-- Domain-driven status models
-
-### Planned
-
-- Retry mechanism
-- Persistent monitoring history
-- Structured JSON reports
-- HTML reports
-- Continuous scheduling
-- Alert integrations
-- Automated tests
-- Docker support
-
----
-
-## Running
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Configure environment variables:
+
+```text
+SLACK_ENABLED=true
+SLACK_WEBHOOK_URL=YOUR_WEBHOOK
+```
+
+Run:
+
+```bash
 python -m src.main
 ```
 
 ---
 
-## Learning Objective
+# GitHub Actions
 
-Rather than building a production-ready uptime service immediately, this repository documents the process of learning networking, asynchronous programming, clean architecture, and maintainable Python application design through incremental development.
+The project is designed to run automatically using GitHub Actions.
+
+The workflow:
+
+- Installs dependencies
+- Loads secrets
+- Executes the monitor
+- Exits after completion
+
+The schedule can be configured using cron expressions, for example:
+
+```yaml
+schedule:
+  - cron: "*/30 * * * *"
+```
+
+or
+
+```yaml
+schedule:
+  - cron: "0 * * * *"
+```
+
+---
+
+# Example Report
+
+```text
+Report Summary
+
+Total: 7
+UP: 6
+DOWN: 0
+DEGRADED: 1
+
+DEGRADED
+https://webartsy.nl
+
+WordPress Reports
+
+Website: https://webartsy.nl
+Status: DEGRADED
+HTTP Code: 200
+WordPress Version: 6.8.2
+REST API: Disabled
+XML-RPC: Enabled
+Login Page: Accessible
+Database Error: No
+Maintenance Mode: No
+```
+
+---
+
+# Roadmap
+
+Future improvements include:
+
+- Email notifications
+- Microsoft Teams notifications
+- Discord notifications
+- HTML dashboard
+- Historical charts
+- Response-time graphs
+- Daily summary reports
+- SSL certificate monitoring
+- Domain expiration monitoring
+- Docker deployment
+- Unit and integration tests
+- Plugin-based monitoring extensions
+
+---
+
+# Learning Goals
+
+This project was built to explore:
+
+- Asynchronous programming
+- HTTP networking
+- Failure classification
+- Domain-driven design principles
+- Separation of concerns
+- Clean architecture
+- Repository pattern
+- Configuration management
+- Event evaluation
+- Background automation
+- Incremental software design
+
+The objective is not to compete with enterprise monitoring platforms, but to understand how a monitoring system can be designed, implemented, and extended using modern Python practices.
