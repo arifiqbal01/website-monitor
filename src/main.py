@@ -1,5 +1,4 @@
 import asyncio
-import time
 
 from dotenv import load_dotenv
 
@@ -22,11 +21,9 @@ def bootstrap():
     return websites, config, processor
 
 
-async def main(
-    config,
-    websites,
-    processor,
-):
+async def main():
+
+    websites, config, processor = bootstrap()
 
     reports = await run_monitor(
         config=config,
@@ -37,26 +34,7 @@ async def main(
 
 
 def run():
-
-    websites, config, processor = bootstrap()
-
-    cycle_count = 1
-
-    while True:
-
-        print(f"**************** Cycle: {cycle_count} *************")
-
-        asyncio.run(
-            main(
-                config=config,
-                websites=websites,
-                processor=processor,
-            )
-        )
-
-        cycle_count += 1
-
-        time.sleep(config.interval_minutes * 60)
+    asyncio.run(main())
 
 
 if __name__ == "__main__":
