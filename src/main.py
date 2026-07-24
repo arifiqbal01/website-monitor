@@ -23,14 +23,19 @@ def bootstrap():
 
 async def main():
 
+    print("1. Bootstrap")
     websites, config, processor = bootstrap()
 
+    print("2. Run monitor")
     reports = await run_monitor(
         config=config,
         websites=websites,
     )
 
+    print("3. Process reports")
     await processor.process(reports)
+
+    print("4. Finished")
 
 
 def run():
