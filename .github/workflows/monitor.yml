@@ -1,4 +1,4 @@
-name: Website Monitor
+name: Website Monitor Test
 
 on:
   schedule:
